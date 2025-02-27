@@ -4,12 +4,12 @@ import random
 number = random.randint(-10, 10)
 
 
-def pnive(arg):
+def random_number(int):
 
-    if arg > 0:
-        print(f"{arg} is positive")
-    elif arg < 0:
-        print(f"{arg} is negative")
+    if int > 0:
+        print(f"{int} is positive")
+    elif int < 0:
+        print(f"{int} is negative")
     else:
-        print(f"{arg} is zero")
-pnive(number)
+        print(f"{int} is zero")
+random_number(number)
