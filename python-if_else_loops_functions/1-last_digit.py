@@ -1,18 +1,15 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 import random
 number = random.randint(-10000, 10000)
-def random_signed_number(int):
-    if int >= 0:
-        x = int % 10
-        if x > 5:
-            print(f"Last digit of {int} is {x} and is greater than 5")
-        elif x == 0:
-            print(f"Last digit of {int} is {x} and is 0")
-        elif x < 6 & x != 0:
-            print(f"Last digit of {int} is {x} and is less than 6 and not 0")
-    else:
-        x = -int % 10
-        y = -x
-        print(f"Last digit of {int} is {y} and is less than 6 and not 0")
+last_digit = abs(number) % 10
+if number < 0:
+    last_digit *= (-1)
+sign_info = ''
+if last_digit > 5:
+    sign_info = 'and is greater than 5'
+elif last_digit == 0:
+    sign_info = 'and is 0'
+else:
+    sign_info = 'and is less than 6 and not 0'
 
-random_signed_number(number)
+print(f"Last digit of {number} is {last_digit} {sign_info}")
